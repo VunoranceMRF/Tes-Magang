@@ -1,23 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import TransactionData from "./viewData.json";
+import "./App.css";
+
+import Records from "./testing.json";
 
 function App() {
+  let DisplayData = TransactionData.map((info) => {
+    return (
+      info.data && info.data.map((content) => (
+        <tr>
+        <td>{content.id}</td>
+        <td>{content.productID}</td>
+        <td>{content.productName}</td>
+        <td>{content.customerName}</td>
+        <td>{content.transactionDate}</td>
+        <td><button>View Detail</button></td>
+      </tr>
+      )
+      )  
+    );
+  });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Product ID</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Customer Name</th>
+            <th scope="col">Transaction Date</th>
+            <th scope="col">Details</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {DisplayData}
+        </tbody>
+      </table>
     </div>
   );
 }
