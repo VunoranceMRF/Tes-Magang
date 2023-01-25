@@ -50,5 +50,46 @@ button:hover {
   background-color: rgb(57, 163, 66);
 }
 
+.btnPgAdd{
+  margin-right: 1500px;
+  margin-top: 30px;
+  background-color: rgb(254, 150, 115);
+  color: rgb(83, 83, 83);
+}
+
+.btnPgAdd:hover {
+  background-color: red;
+}
+
+.btnPgEdit{
+  background-color: rgb(122, 126, 255);
+  color: rgb(83, 83, 83);
+}
+
+.btnPgEdit:hover {
+  background-color: rgb(44, 255, 237);
+}
+
+.pgAdd{
+  text-decoration: none;
+  background-color: rgb(254, 150, 115);
+}
+
+.pgAdd:hover {
+  background-color: red;
+}
+
+.pgEdit{
+  text-decoration: none;
+  color:rgb(83, 83, 83);
+  background-color: rgb(122, 126, 255);
+}
+
+.pgEdit:hover {
+  background-color: rgb(44, 255, 237);
+}
+
+
+
 
 

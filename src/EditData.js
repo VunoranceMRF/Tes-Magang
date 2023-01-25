@@ -1,8 +1,7 @@
-import logo from "./logo.svg";
+import "./EditData.css";
 import TransactionData from "./viewData.json";
-import "./App.css";
 
-function App() {
+function EditData() {
   let DisplayData = TransactionData.map((info) => {
     return (
       info.data &&
@@ -41,14 +40,8 @@ function App() {
 
         <tbody>{DisplayData}</tbody>
       </table>
-
-      <button className="btnPgAdd">
-        <a className="pgAdd" href="/AddData.js">
-          Page Add Data
-        </a>
-      </button>
     </div>
   );
 }
 
-export default App;
+export default EditData;
